@@ -19,6 +19,9 @@ python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\acti
 pip install -r backend/requirements.txt
 uvicorn backend.app.main:app --reload --port 8000
 
+# Test suite
+pytest -q
+
 # Dev services (DB + cache)
 docker compose up -d db redis
 ```
